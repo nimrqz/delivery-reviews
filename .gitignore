@@ -11,3 +11,4 @@ checkpoints/
 wandb/
 data/raw/
 data/*.parquet
+!data/DATASET_CARD.md
