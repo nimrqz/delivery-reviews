@@ -3,19 +3,19 @@ from __future__ import annotations
 
 import pytest
 
-torch = pytest.importorskip("torch")
-pytest.importorskip("transformers")
-
-from transformers import BertConfig, BertTokenizerFast  # noqa: E402
-
-from delivery_reviews.modeling import MultiHeadConfig, MultiHeadModel  # noqa: E402
-
 VOCAB = ["[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "o", "pedido", "chegou", "frio",
          "atrasado", "ótimo", "comida", "entrega", "rápida", "e", "muito"]
 
 
 @pytest.fixture(scope="session")
 def tiny_model_dir(tmp_path_factory):
+    # Imports aqui dentro: sem torch só os testes que usam este fixture são pulados.
+    torch = pytest.importorskip("torch")
+    pytest.importorskip("transformers")
+    from transformers import BertConfig, BertTokenizerFast
+
+    from delivery_reviews.modeling import MultiHeadConfig, MultiHeadModel
+
     path = tmp_path_factory.mktemp("tiny")
     vocab_file = path / "vocab.txt"
     vocab_file.write_text("\n".join(VOCAB), encoding="utf-8")
