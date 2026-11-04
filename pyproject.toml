@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delivery-reviews-ptbr"
+version = "0.1.0"
+description = "Classificador multi-label de avaliações de delivery em PT-BR (BERTimbau)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scikit-learn>=1.4",
+    "python-dotenv>=1.0",
+    "datasets>=2.19",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+train = ["torch>=2.2", "transformers>=4.41", "accelerate>=0.30", "matplotlib>=3.8"]
+llm = ["anthropic>=0.40"]
+demo = ["gradio>=4.30", "torch>=2.2", "transformers>=4.41"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
