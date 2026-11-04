@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "delivery-reviews-ptbr"
+name = "delivery-reviews"
 version = "0.1.0"
-description = "Classificador multi-label de avaliações de delivery em PT-BR (BERTimbau)"
+description = "Classificador multi-label de avaliações de delivery (BERTimbau)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

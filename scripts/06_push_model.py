@@ -23,7 +23,7 @@ pipeline_tag: text-classification
 tags: [multi-label, sentiment, delivery, portuguese, bertimbau]
 ---
 
-# BERTimbau — avaliações de delivery (PT-BR)
+# BERTimbau — avaliações de delivery
 
 Modelo multi-tarefa baseado em [`{base}`](https://huggingface.co/{base}) que lê uma avaliação
 de delivery e prevê **sentimento**, **problemas (multi-label)** e **urgência**.
@@ -31,7 +31,7 @@ de delivery e prevê **sentimento**, **problemas (multi-label)** e **urgência**
 ## Uso
 
 ```python
-# requer o pacote do projeto: pip install git+https://github.com/nimrqz/claude_personal#subdirectory=07-delivery-reviews-ptbr
+# requer o pacote do projeto: pip install git+https://github.com/nimrqz/delivery-reviews
 from delivery_reviews.inference import Predictor
 
 pred = Predictor("{repo}")

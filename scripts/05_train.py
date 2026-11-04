@@ -28,7 +28,7 @@ def _download_splits(repo: str, token: str | None) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--data-dir", default="data/final")
-    ap.add_argument("--hf-dataset", default=None, help="ex.: nimrqz/delivery-reviews-ptbr")
+    ap.add_argument("--hf-dataset", default=None, help="ex.: nimrqz/delivery-reviews")
     ap.add_argument("--output-dir", default="outputs/bertimbau")
     ap.add_argument("--base-model", default=BASE_MODEL)
     ap.add_argument("--epochs", type=int, default=5)

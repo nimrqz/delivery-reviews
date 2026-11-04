@@ -1,4 +1,4 @@
-# Classificador de avaliações de delivery (PT-BR)
+# Classificador de avaliações de delivery
 
 Dada uma avaliação de cliente, o modelo devolve três coisas ao mesmo tempo:
 
@@ -14,7 +14,7 @@ Projeto de estudo, **em andamento**. O código do pipeline completo está pronto
 
 ## Limitações que importam
 
-- **Domínio diferente.** Os textos vêm do [B2W-Reviews01](https://huggingface.co/datasets/ruanchaves/b2w-reviews01), que é de e-commerce, não de apps de delivery. Um filtro por palavras-chave seleciona avaliações que falam de entrega, comida e embalagem, mas o vocabulário continua sendo o de e-commerce. Não espere o mesmo desempenho em avaliações reais de iFood e similares.
+- **Domínio diferente.** Os textos vêm do [B2W-Reviews01](https://huggingface.co/datasets/ruanchaves/b2w-reviews01), que é de e-commerce, não de apps de delivery. Um filtro por palavras-chave seleciona avaliações que falam de entrega, comida e embalagem, mas o vocabulário continua sendo o de e-commerce. Não espere o mesmo desempenho em avaliações reais de apps de delivery.
 - **Rótulos fracos.** Os rótulos nascem de um LLM (ou de regras de palavra-chave, sem API) e depois são revisados por uma única pessoa. Isso carrega viés do pré-rotulador e subjetividade, principalmente em urgência.
 - **Seleção por palavra-chave** superestima a frequência de problemas em relação a uma amostra aleatória de pedidos.
 - **Classes raras** (`item_faltando`, `entregador`) têm poucos exemplos.

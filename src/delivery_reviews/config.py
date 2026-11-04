@@ -38,7 +38,7 @@ class Settings:
 
     @property
     def dataset_repo(self) -> str:
-        return f"{self.hf_username}/delivery-reviews-ptbr"
+        return f"{self.hf_username}/delivery-reviews"
 
     @property
     def model_repo(self) -> str:

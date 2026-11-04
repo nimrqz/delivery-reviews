@@ -4,11 +4,11 @@ license: cc-by-nc-sa-4.0
 task_categories: [text-classification]
 task_ids: [multi-label-classification, sentiment-classification]
 size_categories: [1K<n<10K]
-pretty_name: Delivery Reviews PT-BR
+pretty_name: Delivery Reviews
 source_datasets: [ruanchaves/b2w-reviews01]
 ---
 
-# delivery-reviews-ptbr
+# delivery-reviews
 
 Avaliações de clientes em português do Brasil, rotuladas com **sentimento**, **problemas (multi-label)**
 e **urgência**, para classificação de feedback de delivery.
